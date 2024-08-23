@@ -169,7 +169,6 @@ def save_to_excel(data, file_path):
     df = pd.DataFrame(data)
     df.to_excel(file_path, index=False)
 
-# Process each page and accumulate results
 all_data = []
 next_box = 1
 for image in images:
@@ -177,5 +176,4 @@ for image in images:
     next_box = b_n + 1
     all_data.extend(page)
 
-# Save results to Excel
 save_to_excel(all_data, 'output.xlsx')
